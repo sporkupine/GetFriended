@@ -1,0 +1,12 @@
+.navbar-dark {
+  background: #c4c4c4 !important;
+}
+
+
+.navbar li a {
+  color: black;
+}
+
+.navbar-dark .navbar-brand {
+  color: black;
+}
