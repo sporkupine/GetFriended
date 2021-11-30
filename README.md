@@ -40,8 +40,45 @@ Task 3: Create a button that allows you to create a post. When the user clicks t
 
 Task 4: Each time you post something, you should see it in your homepage shown in the design.
 
+# Features Task Breakdown
+
+## Create a Suggested Friends page Feature
+
+Task 5. Show all available friends in this page.
+
+## Create a profile page Feature
+
+Task 6. Show the user's image, bio and email in the profile page.
+
+Task 7. Show all posts by the user
+
+Task 8. In the suggested friends page, click a use image, redirect to user's profile.
+
+Task 9. Click on my profile image in the navbar and redirect to my profile page.
+
+## Create a GetFriended Page Feature
+
+Task 10. Create a GetFriended Page similiar to the design
 
 
+## Create a Sign up Page Feature
+
+Task 11. Allow the user to sign up(Use firebase to do this)
+
+Task 12. Once the user signs up, redirect him to the login page.
+
+## Create a login Page Feature
+
+Task 13. Allow the user to login. 
+
+Task 14. Redirect the user once he's logged in.
+
+Task 15. Make sure the user cannot access any paths without being logged in such as suggested friends, user profiles, homepage.
+
+
+
+
+---
 ---
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
