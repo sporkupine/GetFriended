@@ -28,6 +28,17 @@ A post can have likes and dislikes!
 ### Figma design link:
   - https://www.figma.com/file/PMxjIII4uKkPEtWJLxmh1n/Untitled?node-id=0%3A1
 
+# MVP Task Breakdown
+
+Create the home page feature.
+
+Task 1. Create the project and install necessary frameworks/technologies(Bootstrap)
+
+Task 2: Create a navbar with the following navlinks corresponding to the home page shown in the figma design.
+
+Task 3: Create a button that allows you to create a post. When the user clicks the button, show a modal that contains a form. Be able to create a post with that form. The form should only include one field and that is a description. 
+
+Task 4: Each time you post something, you should see it in your homepage shown in the design.
 
 
 
