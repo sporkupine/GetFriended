@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-post-modal',
@@ -6,11 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post-modal.component.css']
 })
 export class PostModalComponent implements OnInit {
+  @Input() creatingPost: boolean;
 
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  onCloseModal() {
+    this.creatingPost = false;
   }
 
 }

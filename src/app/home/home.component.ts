@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  creatingPost = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showPostForm() {
+    this.creatingPost = true;
   }
 
 }
