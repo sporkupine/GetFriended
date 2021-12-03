@@ -79,14 +79,17 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 
 
 ---
-## To Do (updated 12/1)
-- display posts on the homepage
-  - use dummy posts and users for now
-- generate pop-up modal on click of the Create Post button on homepage
+## To Do (updated 12/2)
 - Set up routes, get the navbar working
 - auth component with a signup/sign in form linked to Firebase authentication
 - Suggested Friends feature (homepage, probably?)
   - use randomly generated fake users from [this API](https://randomuser.me/)
+
+
+## Done (updated 12/2)
+- display posts on the homepage
+ - use dummy posts and users for now
+- generate pop-up modal on click of the Create Post button on homepage
 - start on a profile page component
 ---
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
