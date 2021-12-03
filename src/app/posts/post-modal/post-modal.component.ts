@@ -1,4 +1,5 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { PostsService } from '../posts.service';
 
 @Component({
   selector: 'app-post-modal',
@@ -7,16 +8,17 @@ import { Component, Input, OnInit, Output } from '@angular/core';
 })
 export class PostModalComponent implements OnInit {
   @Input() creatingPost: boolean;
+  @Output() close = new EventEmitter<void>();
 
 
-  constructor() { }
+  constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
   }
 
 
   onCloseModal() {
-    this.creatingPost = false;
+    this.close.emit();
   }
 
 }

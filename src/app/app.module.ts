@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PostModalComponent } from './posts/post-modal/post-modal.component';
+import { SuggestedFriendsComponent } from './suggested-friends/suggested-friends.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PostModalComponent } from './posts/post-modal/post-modal.component';
     HomeComponent,
     AuthComponent,
     ProfileComponent,
-    PostModalComponent
+    PostModalComponent,
+    SuggestedFriendsComponent
   ],
   imports: [
     BrowserModule,

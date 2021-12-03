@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
     this.creatingPost = true;
   }
 
+  closePostForm() {
+    this.creatingPost = false;
+  }
+
 }
