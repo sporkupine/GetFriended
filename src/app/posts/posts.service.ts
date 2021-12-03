@@ -11,11 +11,19 @@ export class PostsService {
    posts: Post[] = [
         {
             name: 'John Starfish',
-            post: 'This is my first post.',
+            content: 'This is my first post.',
         },
         {
             name: 'Tyler Joe',
-            post: 'I need a vacation.',
+            content: 'I need a vacation.',
+        },
+        {
+          name: 'Jimmy Joe Johnson',
+          content: 'I hate my name.'
+        },
+        {
+          name: 'Billy Barracuda',
+          content: 'Stop polluting the oceans!'
         }
     ];
 
