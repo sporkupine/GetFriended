@@ -32,7 +32,7 @@ A post can have likes and dislikes!
 
 Create the home page feature.
 
-Task 1. Create the project and install necessary frameworks/technologies(Bootstrap)
+~~Task 1. Create the project and install necessary frameworks/technologies(Bootstrap)~~
 
 Task 2: Create a navbar with the following navlinks corresponding to the home page shown in the figma design.
 
@@ -82,7 +82,7 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 ## To Do (updated 12/2)
 - Set up routes, get the navbar working
 - auth component with a signup/sign in form linked to Firebase authentication
-- Suggested Friends feature (homepage, probably?)
+- Suggested Friends feature ~~(homepage, probably?)~~ created a Suggested Friends component
   - use randomly generated fake users from [this API](https://randomuser.me/)
 
 
@@ -92,6 +92,10 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 - generate pop-up modal on click of the Create Post button on homepage
 - start on a profile page component
 ---
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
 ## Development server
