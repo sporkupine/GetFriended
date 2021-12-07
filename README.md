@@ -86,11 +86,12 @@ Task 15. Make sure the user cannot access any paths without being logged in such
   - use randomly generated fake users from [this API](https://randomuser.me/)
 
 
-## Done (updated 12/2)
+## Done (updated 12/6)
 - display posts on the homepage
  - use dummy posts and users for now
 - generate pop-up modal on click of the Create Post button on homepage
 - start on a profile page component
+- make the modal close on background click
 ---
 
 
