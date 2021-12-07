@@ -1,10 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { Post } from '../shared/post.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PostsService {
+  postsSubject = new Subject<Post[]>();
+
   constructor() {}
 
   posts: Post[] = [
@@ -34,6 +37,15 @@ export class PostsService {
         'Anybody know how to get a neighbor evicted? Asking for a friend.',
     },
   ];
+
+  onSubmitPost(postText) {
+    if (postText == '') {
+      return;
+    } else {
+      this.posts.push({ name: '', content: postText });
+      this.postsSubject.next(this.posts.slice());
+    }
+  }
 
   getPosts() {
     return this.posts;

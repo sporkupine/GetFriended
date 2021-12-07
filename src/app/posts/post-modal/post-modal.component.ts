@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { PostsService } from '../posts.service';
 
 @Component({
@@ -16,9 +17,17 @@ export class PostModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmitPost(postText: string){
+    this.postsService.onSubmitPost(postText);
+    this.close.emit();
+  }
+
 
   onCloseModal() {
     this.close.emit();
   }
+
+  postText = new FormControl('');
+
 
 }
