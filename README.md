@@ -84,8 +84,7 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 - auth component with a signup/sign in form linked to Firebase authentication
 - Suggested Friends feature ~~(homepage, probably?)~~ created a Suggested Friends component
   - use randomly generated fake users from [this API](https://randomuser.me/)
-- set up a Posts subject
-  - subscribe in posts component ngOnInit and display posts live on the home/front page
+
 
 
 ## Done (updated 12/6)
@@ -94,6 +93,8 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 - generate pop-up modal on click of the Create Post button on homepage
 - start on a profile page component
 - make the modal close on background click
+- set up a Posts subject
+  - subscribe in posts component ngOnInit and display posts live on the home/front page
 ---
 
 
