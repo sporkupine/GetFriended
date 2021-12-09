@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SuggestedFriendsComponent } from './suggested-friends/suggested-friends.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'suggested-friends', component: SuggestedFriendsComponent },
   { path: 'profile', component: ProfileComponent },
