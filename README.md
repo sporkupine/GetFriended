@@ -34,11 +34,11 @@ Create the home page feature.
 
 ~~Task 1. Create the project and install necessary frameworks/technologies(Bootstrap)~~
 
-Task 2: Create a navbar with the following navlinks corresponding to the home page shown in the figma design.
+~~Task 2: Create a navbar with the following navlinks corresponding to the home page shown in the figma design.~~
 
-Task 3: Create a button that allows you to create a post. When the user clicks the button, show a modal that contains a form. Be able to create a post with that form. The form should only include one field and that is a description. 
+~~Task 3: Create a button that allows you to create a post. When the user clicks the button, show a modal that contains a form. Be able to create a post with that form. The form should only include one field and that is a description. ~~
 
-Task 4: Each time you post something, you should see it in your homepage shown in the design.
+~~Task 4: Each time you post something, you should see it in your homepage shown in the design.~~
 
 # Features Task Breakdown
 
@@ -79,11 +79,15 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 
 
 ---
-## To Do (updated 12/6)
+## To Do (updated 12/9)
 - auth component with a signup/sign in form linked to Firebase authentication
   - auth component exists, working on Firebase authentication
 - Suggested Friends feature ~~(homepage, probably?)~~ created a Suggested Friends component
   - use randomly generated fake users from [this API](https://randomuser.me/)
+- Fix up the 'create post' functionality:
+  - pull current user.name and display it in any new posts (user must be logged in first)
+- change user icon to reflect current user?
+  - default image path can be the same, look for new image path in user object
 
 
 
