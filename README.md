@@ -90,6 +90,7 @@ Task 15. Make sure the user cannot access any paths without being logged in such
   - pull current user.name and display it in any new posts (user must be logged in first)
 - change user icon to reflect current user?
   - default image path can be the same, look for new image path in user object
+- create a loading spinner (at least for the auth page)
 
 
 
