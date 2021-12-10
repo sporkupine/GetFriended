@@ -1,0 +1,8 @@
+p {
+  padding-top: 1rem;
+}
+
+a.authLink {
+  color: blue;
+  text-decoration: underline;
+}
