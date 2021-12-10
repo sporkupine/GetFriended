@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { AuthService } from './auth.service';
 
 @Component({
@@ -16,11 +17,14 @@ export class AuthComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit() {
+  onSubmit(form: NgForm) {
+    const email = form.value.email;
+    const password = form.value.password;
     if (this.isLoginMode) {
       // authService.onLogin
     } else {
-      this.authService.onSignup();
+      this.authService.onSignup(email, password);
     }
+    form.reset();
   }
 }
