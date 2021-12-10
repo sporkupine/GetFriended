@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'suggested-friends', component: SuggestedFriendsComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'auth', component: AuthComponent},
+  { path: 'user/:id', component: ProfileComponent }
 ];
 
 @NgModule({
