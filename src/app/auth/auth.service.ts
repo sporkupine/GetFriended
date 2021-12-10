@@ -11,7 +11,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  onSignup(formData) {
+  onSignup() {
     // this.http.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' + firebaseKey, )
   }
 }

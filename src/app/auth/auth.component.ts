@@ -16,12 +16,11 @@ export class AuthComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onSubmit(formData) {
+  onSubmit() {
     if (this.isLoginMode) {
       // authService.onLogin
     } else {
-      this.authService.onSignup(formData);
-      console.log(formData);
+      this.authService.onSignup();
     }
   }
 }
