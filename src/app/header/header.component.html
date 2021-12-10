@@ -22,8 +22,11 @@
         </li>
       </ul>
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link">Logout</a>
+        <li *ngIf="isAuthenticated" class="nav-item">
+          <a class="nav-link navbar-brand">Logout</a>
+        </li>
+        <li *ngIf="!isAuthenticated" class="nav-item">
+          <a class="nav-link navbar-brand" routerLink="auth">Signup/Login</a>
         </li>
         <img
          routerLink="profile" style="cursor: pointer;"

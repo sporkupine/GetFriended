@@ -19,6 +19,7 @@
           name="password"
           class="form-control"
           placeholder="password"
+          minlength="6"
           required
           ngModel
         />
@@ -32,7 +33,7 @@
           ngModel
         />
         <br>
-        <button type="submit" class="btn btn-primary" >Sign Up</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!authForm.valid" >Sign Up</button>
       </form>
     </div>
   </div>
