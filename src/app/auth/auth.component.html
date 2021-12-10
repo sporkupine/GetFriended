@@ -4,7 +4,7 @@
     <div class="col-4">
       <h4 class="mb-4 mt-4">{{ this.isLoginMode ? "Log In" : "Sign Up" }}</h4>
       <p class="pb-5">Please fill out this form to create an account!</p>
-      <form (ngSubmit)="onSubmit()" #authForm="ngForm">
+      <form (ngSubmit)="onSubmit(authForm.value)" #authForm="ngForm">
         <input
           type="email"
           name="email"
@@ -43,11 +43,14 @@
         </button>
         <br />
         <p *ngIf="!isLoginMode">
-          Already have an account? <a class="authLink" (click)="onSwitchAuth()">Click here</a> to
-          sign in!
+          Already have an account?
+          <a class="authLink" (click)="onSwitchAuth()">Click here</a> to sign
+          in!
         </p>
         <p *ngIf="isLoginMode">
-          New here? <a class="authLink" (click)="onSwitchAuth()">Click here</a> to sign up!
+          New here?
+          <a class="authLink" (click)="onSwitchAuth()">Click here</a> to sign
+          up!
         </p>
       </form>
     </div>
