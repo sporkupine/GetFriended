@@ -23,7 +23,14 @@ export class AuthComponent implements OnInit {
     if (this.isLoginMode) {
       // authService.onLogin
     } else {
-      this.authService.onSignup(email, password);
+      this.authService.onSignup(email, password).subscribe(
+        (responseData) => {
+          console.log(responseData);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
     }
     form.reset();
   }
