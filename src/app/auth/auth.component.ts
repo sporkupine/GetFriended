@@ -9,6 +9,8 @@ import { AuthService } from './auth.service';
 })
 export class AuthComponent implements OnInit {
   isLoginMode: boolean = false;
+  error: string = null;
+
   onSwitchAuth() {
     this.isLoginMode = !this.isLoginMode;
   }
@@ -29,6 +31,7 @@ export class AuthComponent implements OnInit {
         },
         (error) => {
           console.log(error);
+          this.error = "An error occured.";
         }
       );
     }

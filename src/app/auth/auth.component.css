@@ -6,3 +6,8 @@ a.authLink {
   color: blue;
   text-decoration: underline;
 }
+
+div.error-message {
+  color: red;
+  font-weight: bold;
+}
