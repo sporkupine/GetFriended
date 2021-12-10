@@ -3,7 +3,7 @@
     <div class="col-3"></div>
     <div class="col-4">
       <h4 class="mb-4 mt-4">{{ this.isLoginMode ? "Log In" : "Sign Up" }}</h4>
-      <p class="pb-5">Please fill out this form to create an account!</p>
+      <p class="pb-5" *ngIf="!isLoginMode">Please fill out this form to create an account!</p>
       <form (ngSubmit)="onSubmit()" #authForm="ngForm">
         <input
           type="email"
