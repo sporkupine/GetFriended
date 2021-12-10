@@ -43,11 +43,14 @@
         </button>
         <br />
         <p *ngIf="!isLoginMode">
-          Already have an account? <a class="authLink" (click)="onSwitchAuth()">Click here</a> to
-          sign in!
+          Already have an account?
+          <a class="authLink" (click)="onSwitchAuth()">Click here</a> to sign
+          in!
         </p>
         <p *ngIf="isLoginMode">
-          New here? <a class="authLink" (click)="onSwitchAuth()">Click here</a> to sign up!
+          New here?
+          <a class="authLink" (click)="onSwitchAuth()">Click here</a> to sign
+          up!
         </p>
       </form>
     </div>
