@@ -82,6 +82,8 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 ## To Do (updated 12/9)
 - auth component with a signup/sign in form linked to Firebase authentication
   - auth component exists, working on Firebase authentication
+- auth component should show some kind of error if passwords don't match (on signup), or email/password is not valid (on either)
+  - this should also disable the submit button
 - Suggested Friends feature ~~(homepage, probably?)~~ created a Suggested Friends component
   - use randomly generated fake users from [this API](https://randomuser.me/)
 - Fix up the 'create post' functionality:
