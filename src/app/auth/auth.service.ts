@@ -22,6 +22,8 @@ export class AuthService {
 
   firebaseKey = 'AIzaSyBi_RK22Ld3-_inBGJ9RuV3JBiwvFupI1w';
 
+  tokenExpirationTImer: any;
+
   user = new BehaviorSubject<AuthUser>(null);
 
   constructor(private http: HttpClient, private router: Router) {}
@@ -93,12 +95,25 @@ export class AuthService {
 
     if (loadedUser.token) {
       this.user.next(loadedUser);
+      const expirationTime = new Date(userData._tokenExpirationDate).getTime() - new Date().getTime();
+      this.autoLogout(expirationTime);
     }
   }
 
   onLogout() {
     this.user.next(null);
-    this.router.navigate(['auth']);
+    this.router.navigate(['/auth']);
+    localStorage.removeItem('userData');
+    if(this.tokenExpirationTImer) {
+      clearTimeout(this.tokenExpirationTImer);
+    }
+    this.tokenExpirationTImer = null;
+  }
+
+  autoLogout(expirationTime: number) {
+    this.tokenExpirationTImer = setTimeout(() => {
+      this.onLogout();
+    }, expirationTime);
   }
 
   private handleAuth(
@@ -111,6 +126,7 @@ export class AuthService {
 
     const user = new AuthUser(email, localId, token, expirationDate);
     this.user.next(user);
+    this.autoLogout(expiresIn * 1000);
     localStorage.setItem('userData', JSON.stringify(user));
   }
 
