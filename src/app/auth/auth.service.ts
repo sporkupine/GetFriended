@@ -73,6 +73,10 @@ export class AuthService {
       );
   }
 
+  onLogout(){
+    this.user.next(null);
+  }
+
   private handleAuth(
     email: string,
     localId: string,
