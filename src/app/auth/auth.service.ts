@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, tap } from 'rxjs/operators';
-import { Subject, throwError } from 'rxjs';
+import { BehaviorSubject, Subject, throwError } from 'rxjs';
 import { AuthUser } from './auth-user.model';
+import { Router } from '@angular/router';
 
 export interface AuthResponseData {
   idToken: string;
@@ -21,9 +22,9 @@ export class AuthService {
 
   firebaseKey = 'AIzaSyBi_RK22Ld3-_inBGJ9RuV3JBiwvFupI1w';
 
-  user = new Subject<AuthUser>();
+  user = new BehaviorSubject<AuthUser>(null);
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   onSignup(email: string, password: string) {
     return this.http
@@ -73,8 +74,31 @@ export class AuthService {
       );
   }
 
-  onLogout(){
+  autoLogin() {
+    const userData: {
+      email: string;
+      id: string;
+      _token: string;
+      _tokenExpirationDate: string;
+    } = JSON.parse(localStorage.getItem('userData'));
+    if (!userData) {
+      return;
+    }
+    const loadedUser = new AuthUser(
+      userData.email,
+      userData.id,
+      userData._token,
+      new Date(userData._tokenExpirationDate)
+    );
+
+    if (loadedUser.token) {
+      this.user.next(loadedUser);
+    }
+  }
+
+  onLogout() {
     this.user.next(null);
+    this.router.navigate(['auth']);
   }
 
   private handleAuth(
@@ -87,6 +111,7 @@ export class AuthService {
 
     const user = new AuthUser(email, localId, token, expirationDate);
     this.user.next(user);
+    localStorage.setItem('userData', JSON.stringify(user));
   }
 
   private handleError(errorResponse: HttpErrorResponse) {
@@ -112,7 +137,6 @@ export class AuthService {
   }
 }
 
-// set up http requests to Firebase for signup [x], login [x], sign out [], auto-login, auto-logout[].
-// set up an interceptor for auto-login and auto-logout
+// set up http requests to Firebase for signup[x], login[x], sign out[x], auto-login[x], auto-logout[].
 // add an auth guard to prevent unauthorized access to profile, suggested friends components
 // use the class project and videos as a reference

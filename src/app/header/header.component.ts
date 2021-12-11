@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { AuthService } from '../auth/auth.service';
@@ -10,13 +9,13 @@ import { AuthService } from '../auth/auth.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-  isAuthenticated: boolean = false;
+  isAuthenticated = false;
   private userSub: Subscription;
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.userSub = this.authService.user.subscribe((authUser) => {
-      this.isAuthenticated = !!authUser;
+    this.userSub = this.authService.user.subscribe((user) => {
+      this.isAuthenticated = !!user;
     });
   }
 
@@ -26,6 +25,5 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   logout() {
     this.authService.onLogout();
-    this.router.navigate(['auth']);
   }
 }
