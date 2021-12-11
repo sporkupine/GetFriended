@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
+import { Subject, throwError } from 'rxjs';
+import { AuthUser } from './auth-user.model';
 
 export interface AuthResponseData {
   idToken: string;
@@ -20,6 +21,8 @@ export class AuthService {
 
   firebaseKey = 'AIzaSyBi_RK22Ld3-_inBGJ9RuV3JBiwvFupI1w';
 
+  user = new Subject<AuthUser>();
+
   constructor(private http: HttpClient) {}
 
   onSignup(email: string, password: string) {
@@ -33,7 +36,17 @@ export class AuthService {
           returnSecureToken: true,
         }
       )
-      .pipe(catchError(this.handleError));
+      .pipe(
+        catchError(this.handleError),
+        tap((responseData) => {
+          this.handleAuth(
+            responseData.email,
+            responseData.localId,
+            responseData.idToken,
+            +responseData.expiresIn
+          );
+        })
+      );
   }
 
   onSignin(email: string, password: string) {
@@ -47,7 +60,29 @@ export class AuthService {
           returnSecureToken: true,
         }
       )
-      .pipe(catchError(this.handleError));
+      .pipe(
+        catchError(this.handleError),
+        tap((responseData) => {
+          this.handleAuth(
+            responseData.email,
+            responseData.localId,
+            responseData.idToken,
+            +responseData.expiresIn
+          );
+        })
+      );
+  }
+
+  private handleAuth(
+    email: string,
+    localId: string,
+    token: string,
+    expiresIn: number
+  ) {
+    const expirationDate = new Date(new Date().getTime() + expiresIn * 1000);
+
+    const user = new AuthUser(email, localId, token, expirationDate);
+    this.user.next(user);
   }
 
   private handleError(errorResponse: HttpErrorResponse) {
