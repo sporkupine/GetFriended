@@ -95,7 +95,9 @@ export class AuthService {
 
     if (loadedUser.token) {
       this.user.next(loadedUser);
-      const expirationTime = new Date(userData._tokenExpirationDate).getTime() - new Date().getTime();
+      const expirationTime =
+        new Date(userData._tokenExpirationDate).getTime() -
+        new Date().getTime();
       this.autoLogout(expirationTime);
     }
   }
@@ -104,7 +106,7 @@ export class AuthService {
     this.user.next(null);
     this.router.navigate(['/auth']);
     localStorage.removeItem('userData');
-    if(this.tokenExpirationTImer) {
+    if (this.tokenExpirationTImer) {
       clearTimeout(this.tokenExpirationTImer);
     }
     this.tokenExpirationTImer = null;
@@ -153,6 +155,6 @@ export class AuthService {
   }
 }
 
-// set up http requests to Firebase for signup[x], login[x], sign out[x], auto-login[x], auto-logout[].
+// set up http requests to Firebase for signup[x], login[x], sign out[x], auto-login[x], auto-logout[x].
 // add an auth guard to prevent unauthorized access to profile, suggested friends components
 // use the class project and videos as a reference
