@@ -1,1 +1,14 @@
-<p>suggested-friends works!</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6" *ngFor="let user of users">
+      <div class="card" style="width: 18rem;">
+      <img [src]="user.imagePath" class="card-img-top" alt="...">
+      <div class="card-body">
+      <h5 class="card-title">{{user.name}}</h5>
+      <p class="card-text">{{user.bio}}</p>
+      <button class="btn btn-primary">Go to Profile</button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
