@@ -6,3 +6,11 @@ a.authLink {
   color: blue;
   text-decoration: underline;
 }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+span.help-block {
+  color: rgb(110, 7, 7);
+}
