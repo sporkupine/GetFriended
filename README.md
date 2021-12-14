@@ -79,12 +79,15 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 
 
 ---
-## To Do (updated 12/10)
+## To Do (updated 12/14)
 - Fix up the 'create post' functionality:
   - pull current user.name and display it in any new posts (user must be logged in first)
 - change user icon to reflect current user?
   - default image path can be the same, look for new image path in user object
 - create a loading spinner (at least for the auth page)
+- add validation to the auth page
+  - make sure email is a valid email, password is at least six characters
+    - for signup only: make sure password and password confirm fields match before submitting form
 
 
 
