@@ -32,8 +32,7 @@ export class AuthComponent implements OnInit {
             Validators.minLength(6),
           ]),
           passwordConfirm: new FormControl(null),
-        },
-        []
+        }, this.passwordMatchValidator
       ),
     });
   }
@@ -62,10 +61,8 @@ export class AuthComponent implements OnInit {
     this.authForm.reset();
   }
 
-  matchPasswords(password: string, confirmPassword: string) {
-    if (password !== confirmPassword) {
-      return { passwordsDontMatch: true };
-    }
-    return null;
-  }
+  passwordMatchValidator(g: FormGroup) {
+    return g.get('password').value === g.get('passwordConfirm').value
+       ? null : {'mismatch': true};
+ }
 }
