@@ -49,19 +49,20 @@
             <br />
             <div *ngIf="!isLoginMode">
               <input
-                formControlName="password-confirm"
+                formControlName="passwordConfirm"
                 type="password"
                 name="passwordConfirm"
                 class="form-control mb-5"
                 placeholder="confirm password"
               />
-              <!-- <span
+              <span
                 class="help-block"
                 *ngIf="
-                  !authForm.get('passwordMatch.passwordConfirm').valid &&
+                  authForm.get('passwordMatch').invalid  &&
                   authForm.get('passwordMatch.passwordConfirm').touched
                 "
-                >Passwords must match.</span> -->
+                >Passwords must match.</span
+              >
             </div>
           </div>
 
