@@ -63,15 +63,15 @@ Task 10. Create a GetFriended Page similiar to the design
 
 ## Create a Sign up Page Feature
 
-Task 11. Allow the user to sign up(Use firebase to do this)
+~~Task 11. Allow the user to sign up(Use firebase to do this)~~
 
-Task 12. Once the user signs up, redirect him to the login page.
+~~Task 12. Once the user signs up, redirect him to the login page.~~
 
 ## Create a login Page Feature
 
-Task 13. Allow the user to login. 
+~~Task 13. Allow the user to login.~~
 
-Task 14. Redirect the user once he's logged in.
+~~Task 14. Redirect the user once he's logged in.~~
 
 Task 15. Make sure the user cannot access any paths without being logged in such as suggested friends, user profiles, homepage.
 
@@ -79,19 +79,16 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 
 
 ---
-## To Do (updated 12/9)
-- auth component with a signup/sign in form linked to Firebase authentication
-  - auth component exists, working on Firebase authentication
-- Suggested Friends feature ~~(homepage, probably?)~~ created a Suggested Friends component
-  - use randomly generated fake users from [this API](https://randomuser.me/)
+## To Do (updated 12/10)
 - Fix up the 'create post' functionality:
   - pull current user.name and display it in any new posts (user must be logged in first)
 - change user icon to reflect current user?
   - default image path can be the same, look for new image path in user object
+- create a loading spinner (at least for the auth page)
 
 
 
-## Done (updated 12/6)
+## Done (updated 12/10)
 - display posts on the homepage
  - use dummy posts and users for now
 - generate pop-up modal on click of the Create Post button on homepage
@@ -100,6 +97,10 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 - set up a Posts subject
   - subscribe in posts component ngOnInit and display posts live on the home/front page
 - Set up routes, get the navbar working
+- auth component with a signup/sign in form linked to Firebase authentication
+- auth component should show some kind of error if passwords don't match (on signup), or email/password is not valid (on either)
+  - this should also disable the submit button
+- Suggested Friends feature ~~(homepage, probably?)~~ created a Suggested Friends component
 ---
 
 
