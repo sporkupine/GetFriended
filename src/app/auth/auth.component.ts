@@ -63,7 +63,8 @@ export class AuthComponent implements OnInit {
   }
 
   passwordMatchValidator(g: FormGroup) {
-    return g.get('password').value === g.get('passwordConfirm').value
+    return g.get('password').value === g.get('passwordConfirm').value ||
+      g.get('passwordConfirm').value === null
       ? null
       : { mismatch: true };
   }
