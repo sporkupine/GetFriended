@@ -48,17 +48,17 @@ Task 5. Show all available friends in this page.
 
 ## Create a profile page Feature
 
-Task 6. Show the user's image, bio and email in the profile page.
+~~Task 6. Show the user's image, bio and email in the profile page.~~
 
-Task 7. Show all posts by the user
+~~Task 7. Show all posts by the user~~
 
 Task 8. In the suggested friends page, click a use image, redirect to user's profile.
 
-Task 9. Click on my profile image in the navbar and redirect to my profile page.
+~~Task 9. Click on my profile image in the navbar and redirect to my profile page.~~
 
 ## Create a GetFriended Page Feature
 
-Task 10. Create a GetFriended Page similiar to the design
+~~Task 10. Create a GetFriended Page similiar to the design~~
 
 
 ## Create a Sign up Page Feature
@@ -73,13 +73,13 @@ Task 10. Create a GetFriended Page similiar to the design
 
 ~~Task 14. Redirect the user once he's logged in.~~
 
-Task 15. Make sure the user cannot access any paths without being logged in such as suggested friends, user profiles, homepage.
+~~Task 15. Make sure the user cannot access any paths without being logged in such as suggested friends, user profiles, homepage.~~
 
 
 
 
 ---
-## To Do (updated 12/10)
+## To Do (updated 12/14)
 - Fix up the 'create post' functionality:
   - pull current user.name and display it in any new posts (user must be logged in first)
 - change user icon to reflect current user?
@@ -88,7 +88,8 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 
 
 
-## Done (updated 12/10)
+
+## Done (updated 12/15)
 - display posts on the homepage
  - use dummy posts and users for now
 - generate pop-up modal on click of the Create Post button on homepage
@@ -101,6 +102,9 @@ Task 15. Make sure the user cannot access any paths without being logged in such
 - auth component should show some kind of error if passwords don't match (on signup), or email/password is not valid (on either)
   - this should also disable the submit button
 - Suggested Friends feature ~~(homepage, probably?)~~ created a Suggested Friends component
+- add validation to the auth page
+  - make sure email is a valid email, password is at least six characters
+    - for signup only: make sure password and password confirm fields match before submitting form
 ---
 
 

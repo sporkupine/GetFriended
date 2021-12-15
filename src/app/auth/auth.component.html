@@ -14,35 +14,58 @@
         <p class="pb-5" *ngIf="!isLoginMode">
           Please fill out this form to create an account!
         </p>
-        <form (ngSubmit)="onSubmit(authForm)" #authForm="ngForm">
+        <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
           <input
+            formControlName="email"
             type="email"
-            name="email"
             class="form-control mt-5"
             placeholder="email"
-            required
-            ngModel
           />
+          <span
+            class="help-block"
+            *ngIf="
+              !authForm.get('email').valid && authForm.get('email').touched
+            "
+            >Please enter a valid e-mail address.</span
+          >
           <br />
-          <input
-            type="password"
-            name="password"
-            class="form-control"
-            placeholder="password"
-            minlength="6"
-            required
-            ngModel
-          />
-          <br />
-          <input
-            *ngIf="!isLoginMode"
-            type="password"
-            name="password-confirm"
-            class="form-control mb-5"
-            placeholder="confirm password"
-            required
-            ngModel
-          />
+          <div formGroupName="passwordMatch">
+            <input
+              formControlName="password"
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="password"
+            />
+            <span
+              class="help-block"
+              *ngIf="
+                !authForm.get('passwordMatch.password').valid &&
+                authForm.get('passwordMatch.password').touched
+              "
+              >Password must be at least six characters in length.</span
+            >
+
+            <br />
+            <div *ngIf="!isLoginMode">
+              <input
+                formControlName="passwordConfirm"
+                type="password"
+                name="passwordConfirm"
+                class="form-control mb-5"
+                placeholder="confirm password"
+              />
+              <span
+                class="help-block"
+                *ngIf="
+                  authForm.get('passwordMatch').invalid  &&
+                  authForm.get('passwordMatch.passwordConfirm').touched
+                "
+                >Passwords must match.</span
+              >
+            </div>
+          </div>
+
           <br />
           <button
             type="submit"
