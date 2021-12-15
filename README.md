@@ -85,13 +85,11 @@ Task 8. In the suggested friends page, click a use image, redirect to user's pro
 - change user icon to reflect current user?
   - default image path can be the same, look for new image path in user object
 - create a loading spinner (at least for the auth page)
-- add validation to the auth page
-  - make sure email is a valid email, password is at least six characters
-    - for signup only: make sure password and password confirm fields match before submitting form
 
 
 
-## Done (updated 12/10)
+
+## Done (updated 12/15)
 - display posts on the homepage
  - use dummy posts and users for now
 - generate pop-up modal on click of the Create Post button on homepage
@@ -104,6 +102,9 @@ Task 8. In the suggested friends page, click a use image, redirect to user's pro
 - auth component should show some kind of error if passwords don't match (on signup), or email/password is not valid (on either)
   - this should also disable the submit button
 - Suggested Friends feature ~~(homepage, probably?)~~ created a Suggested Friends component
+- add validation to the auth page
+  - make sure email is a valid email, password is at least six characters
+    - for signup only: make sure password and password confirm fields match before submitting form
 ---
 
 
