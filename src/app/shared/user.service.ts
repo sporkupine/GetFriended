@@ -31,4 +31,9 @@ export class UserService {
   getUsers() {
     return this.users.slice();
   }
+
+  getUserById(id: number){
+    const user = this.users.find((user) => user.id = id)
+    return user;
+  }
 }
