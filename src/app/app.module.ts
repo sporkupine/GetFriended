@@ -12,6 +12,7 @@ import { AuthComponent } from './auth/auth.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PostModalComponent } from './posts/post-modal/post-modal.component';
 import { SuggestedFriendsComponent } from './suggested-friends/suggested-friends.component';
+import { UserService } from './shared/user.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { SuggestedFriendsComponent } from './suggested-friends/suggested-friends
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
