@@ -26,4 +26,12 @@ export class ProfileComponent implements OnInit {
     this.activeUser = this.userService.getUserById(+this.id);
     this.posts = this.activeUser.posts;
   }
+
+  onAddFriend(user){
+    this.userService.addFriend(user);
+  }
+
+  onDeleteFriend(user){
+    this.userService.deleteFriend(user);
+  }
 }

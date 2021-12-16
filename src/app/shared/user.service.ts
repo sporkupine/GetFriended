@@ -37,6 +37,7 @@ export class UserService {
           date: new Date(2020, 11, 16, 12, 14, 12),
         },
       ],
+      isFriends: false,
     },
     {
       id: 1,
@@ -67,6 +68,7 @@ export class UserService {
           date: new Date(2021, 10, 19, 23, 21),
         },
       ],
+      isFriends: false,
     },
     {
       id: 2,
@@ -97,6 +99,7 @@ export class UserService {
           date: new Date(2021, 3, 23, 8, 51),
         },
       ],
+      isFriends: false,
     },
     {
       id: 3,
@@ -126,6 +129,7 @@ export class UserService {
           date: new Date(2021, 9, 18, 17, 49),
         },
       ],
+      isFriends: false,
     },
   ];
 
@@ -143,5 +147,13 @@ export class UserService {
     let mergedPosts = [].concat.apply([], allPosts);
 
     return mergedPosts;
+  }
+
+  addFriend(user: User) {
+    user.isFriends = true;
+  }
+
+  deleteFriend(user: User) {
+    user.isFriends = false;
   }
 }

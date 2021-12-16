@@ -7,7 +7,8 @@
       <h5 class="card-title">{{user.name}}</h5>
       <p class="card-text">{{user.bio}}</p>
       <button class="btn btn-primary" (click)="onViewProfile(user.id)">Go to Profile</button>
-      <button class="btn btn-success">Add Friend</button>
+      <button *ngIf="!user.isFriends" class="btn btn-success" (click)="onAddFriend(user)">Add Friend</button>
+      <button *ngIf="user.isFriends" class="btn btn-danger" (click)="onDeleteFriend(user)">Delete Friend</button>
 
   </div>
 </div>
