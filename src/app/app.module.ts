@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PostModalComponent } from './posts/post-modal/post-modal.component';
 import { SuggestedFriendsComponent } from './suggested-friends/suggested-friends.component';
 import { UserService } from './shared/user.service';
+import { AlertComponent } from './shared/alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { UserService } from './shared/user.service';
     AuthComponent,
     ProfileComponent,
     PostModalComponent,
-    SuggestedFriendsComponent
+    SuggestedFriendsComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

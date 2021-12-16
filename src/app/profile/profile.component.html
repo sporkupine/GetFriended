@@ -1,12 +1,13 @@
 <div class="container">
   <div class="row">
+    <app-alert *ngIf="friendAdded || friendDeleted"></app-alert>
     <div class="col-md-4 mb30">
       <div class="card">
         <div class="card-content pt20 pb20 profile-header">
           <img
             [src]="activeUser.imagePath"
             alt="user profile picture"
-            class="img-fluid rounded-circle"
+            class="img-fluid rounded"
           />
           <h3 class="card-title text-center mb20">{{ activeUser.name }}</h3>
           <hr />

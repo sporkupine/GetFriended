@@ -9,7 +9,8 @@ import { UserService } from '../shared/user.service';
   styleUrls: ['./suggested-friends.component.css']
 })
 export class SuggestedFriendsComponent implements OnInit {
-
+  friendAdded: boolean = false;
+  friendDeleted: boolean = false;
   users: User[];
 
   constructor(private userService: UserService, private router: Router) { }
@@ -24,10 +25,12 @@ export class SuggestedFriendsComponent implements OnInit {
 
   onAddFriend(user) {
     this.userService.addFriend(user);
+    this.friendAdded = true;
   }
 
   onDeleteFriend(user) {
     this.userService.deleteFriend(user);
+    this.friendDeleted = true;
   }
 
 }

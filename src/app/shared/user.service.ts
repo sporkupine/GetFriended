@@ -151,6 +151,7 @@ export class UserService {
 
   addFriend(user: User) {
     user.isFriends = true;
+
   }
 
   deleteFriend(user: User) {
