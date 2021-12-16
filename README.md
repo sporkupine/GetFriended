@@ -29,12 +29,22 @@ A post can have likes and dislikes!
   - https://www.figma.com/file/PMxjIII4uKkPEtWJLxmh1n/Untitled?node-id=0%3A1
 
 ---
-## To Do (updated 12/14)
+## To Do (updated 12/15)
+- Create 'Add Friend' and 'Delete Friend' buttons
+  - create modal popups for when user adds or deletes a friend
+- Create 'Like' and 'Dislike' (or similar) buttons for posts
+  - maybe sort by score instead of date?
 - Fix up the 'create post' functionality:
   - pull current user.name and display it in any new posts (user must be logged in first)
 - change user icon to reflect current user?
   - default image path can be the same, look for new image path in user object
 - create a loading spinner (at least for the auth page)
+- get posts on homepage to display their user's profile picture
+- fix the profile link when navigating from another profile
+- Clean up CSS, make the whole thing look pretty
+- Give the post modal a title input
+- fix wonky profile pictures on user profiles (specifically Boba Fett & the Ultimate Warrior)
+- 
 
 
 
