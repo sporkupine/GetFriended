@@ -13,13 +13,13 @@ export class PostsService {
 
   posts: Post[] = this.userService.fetchPosts();
 
-  onSubmitPost(postText) {
+  onSubmitPost(postName, postText) {
     if (postText == '') {
       return;
     } else {
       this.posts.push({
         userName: '',
-        name: '',
+        name: postName,
         content: postText,
         date: new Date(),
       });

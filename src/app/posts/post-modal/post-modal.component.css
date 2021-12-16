@@ -13,7 +13,7 @@
     top: 30vh;
     left: 20vw;
     width: 60vw;
-    height: 30vw;
+    height: 33vw;
     padding: 3%;
     z-index: 100;
     background: rgba(35, 32, 50, 0.82);
@@ -35,6 +35,13 @@
   margin-right: auto;
   resize: auto;
   overflow: auto;
+}
+
+#postName {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 button {
