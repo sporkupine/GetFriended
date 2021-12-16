@@ -16,108 +16,21 @@
         <!--Posts Section Starts Here-->
       </div>
     </div>
-    <div class="col-md-8 mb30">
-      <div class="card">
-        <div>
-          <ul class="nav tabs-admin" role="tablist">
-            <li role="presentation" class="nav-item">
-              <a class="nav-link active">Activities</a>
-            </li>
-          </ul>
-          <div>
-            <div class="tab-pane active show">
-              <ul class="activity-list list-unstyled">
-                <li class="clearfix">
-                  <div class="float-left">
-                    <a
-                      ><img
-                        [src]="activeUser.imagePath"
-                        alt=""
-                        class="img-fluid rounded-circle"
-                    /></a>
-                  </div>
-                  <div class="act-content">
-                    <div class="font400">
-                      <a class="font600">Post 1</a>
-                    </div>
-                    <span class="text-small">11 Min Ago</span>
-                    <p class="mb0">
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                      sed diam nonummy nibh euismod tincidunt ut.
-                    </p>
-                  </div>
-                </li>
-                <li class="clearfix">
-                  <div class="float-left">
-                    <a><i class="icon-palette"></i></a>
-                  </div>
-                  <div class="act-content">
-                    <div class="font400">
-                      <a class="font600">Post 2</a>
-                    </div>
-                    <span class="text-small">11 Min Ago</span>
-
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div>
-                </li>
-                <li class="clearfix">
-                  <div class="float-left">
-                    <a><i class="icon-user"></i></a>
-                  </div>
-                  <div class="act-content">
-                    <div class="font400">
-                      <a class="font600">Post 3</a>
-                    </div>
-                    <span class="text-small">11 Min Ago</span>
-
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div>
-                </li>
-                <li class="clearfix">
-                  <div class="float-left">
-                    <a><i class="icon-pencil"></i></a>
-                  </div>
-                  <div class="act-content">
-                    <div class="font400">
-                      <a class="font600">Post 4</a>
-                    </div>
-                    <span class="text-small">11 Min Ago</span>
-
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                      Duis aute irure dolor in reprehenderit in voluptate velit
-                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui
-                      officia deserunt mollit anim id est laborum.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+    <div  class="col-md-8 mb30">
+      <div *ngFor="let post of posts">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{post.name }}
+            </h5>
+            <p *ngIf="post.date" class="card-text"><small class="text-muted">{{ post.date | date:'short' }}</small></p>
+            <p class="card-text">
+              {{ post.content }}
+            </p>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+import { Post } from '../shared/post.model';
 import { User } from '../shared/user.model';
 import { UserService } from '../shared/user.service';
 
@@ -11,6 +13,7 @@ import { UserService } from '../shared/user.service';
 export class ProfileComponent implements OnInit {
   id: number;
   activeUser: User;
+  posts: Post[];
 
   constructor(
     private userService: UserService,
@@ -22,5 +25,6 @@ export class ProfileComponent implements OnInit {
 
     this.activeUser = this.userService.getUserById(+this.id);
     console.log(this.activeUser);
+    this.posts = this.activeUser.posts;
   }
 }
