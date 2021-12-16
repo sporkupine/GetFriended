@@ -9,6 +9,13 @@ export class UserService {
 
   users: User[] = [
     {
+      id: 0,
+      name: 'Example Examplington',
+      imagePath: 'https://bootdey.com/img/Content/avatar/avatar6.png',
+      bio: 'I have always felt I would make an excellent example of a typical user on a website!'
+
+    },
+    {
       id: 1,
       name: 'TheUltimateWarrior@hotmail.com',
       imagePath: 'https://www.biography.com/.image/t_share/MTgwNzg0MTk2OTQ2NTY4NTUy/ultimate-warrior-03.jpg',
@@ -33,7 +40,9 @@ export class UserService {
   }
 
   getUserById(id: number){
-    const user = this.users.find((user) => user.id = id)
+    // ===
+    const user = this.users.find((user) => user.id === id);
+    console.log(this.users)
     return user;
   }
 }

@@ -4,13 +4,13 @@
       <div class="card">
         <div class="card-content pt20 pb20 profile-header">
           <img
-            src="https://bootdey.com/img/Content/avatar/avatar6.png"
-            alt=""
+            [src]="activeUser.imagePath"
+            alt="user profile picture"
             class="img-fluid rounded-circle"
           />
-          <h4 class="card-title text-center mb20">User's Name</h4>
-          <p>User profile summary.</p>
+          <h3 class="card-title text-center mb20">{{ activeUser.name }}</h3>
           <hr />
+          <h5>{{ activeUser.bio }}</h5>
         </div>
 
         <!--Posts Section Starts Here-->
@@ -31,14 +31,14 @@
                   <div class="float-left">
                     <a href="#"
                       ><img
-                        src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                        [src]="activeUser.imagePath"
                         alt=""
                         class="img-fluid rounded-circle"
                     /></a>
                   </div>
                   <div class="act-content">
                     <div class="font400">
-                      <a href="#" class="font600">Post 1</a>
+                      <a class="font600">Post 1</a>
                     </div>
                     <span class="text-small">11 Min Ago</span>
                     <p class="mb0">
@@ -49,11 +49,11 @@
                 </li>
                 <li class="clearfix">
                   <div class="float-left">
-                    <a href="#"><i class="icon-palette"></i></a>
+                    <a><i class="icon-palette"></i></a>
                   </div>
                   <div class="act-content">
                     <div class="font400">
-                      <a href="#" class="font600">Post 2</a>
+                      <a class="font600">Post 2</a>
                     </div>
                     <span class="text-small">11 Min Ago</span>
 
@@ -71,11 +71,11 @@
                 </li>
                 <li class="clearfix">
                   <div class="float-left">
-                    <a href="#"><i class="icon-user"></i></a>
+                    <a><i class="icon-user"></i></a>
                   </div>
                   <div class="act-content">
                     <div class="font400">
-                      <a href="#" class="font600">Post 3</a>
+                      <a class="font600">Post 3</a>
                     </div>
                     <span class="text-small">11 Min Ago</span>
 
@@ -93,11 +93,11 @@
                 </li>
                 <li class="clearfix">
                   <div class="float-left">
-                    <a href="#"><i class="icon-pencil"></i></a>
+                    <a><i class="icon-pencil"></i></a>
                   </div>
                   <div class="act-content">
                     <div class="font400">
-                      <a href="#" class="font600">Post 4</a>
+                      <a class="font600">Post 4</a>
                     </div>
                     <span class="text-small">11 Min Ago</span>
 
