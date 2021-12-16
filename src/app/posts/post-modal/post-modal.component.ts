@@ -17,8 +17,8 @@ export class PostModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmitPost(postText: string){
-    this.postsService.onSubmitPost(postText);
+  onSubmitPost(postName: string, postText: string){
+    this.postsService.onSubmitPost(postName, postText);
     this.close.emit();
   }
 
@@ -28,6 +28,7 @@ export class PostModalComponent implements OnInit {
   }
 
   postText = new FormControl('');
+  postName = new FormControl('');
 
 
 }
