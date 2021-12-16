@@ -44,9 +44,5 @@ testem.log
 .DS_Store
 Thumbs.db
 *.pack
-<<<<<<< Updated upstream
-*.pack
-=======
->>>>>>> Stashed changes
-*.pack
-*.pack
+*.pack.old
+
