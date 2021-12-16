@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
-    <app-alert *ngIf="friendAdded || friendDeleted"></app-alert>
+    <app-alert *ngIf=""></app-alert>
+    <!-- need a property that can be updated by AlertService -->
     <div class="col-md-6" *ngFor="let user of users">
       <div class="card" style="width: 18rem;">
       <img [src]="user.imagePath" class="card-img-top" alt="...">

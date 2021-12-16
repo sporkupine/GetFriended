@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
+import { AlertService } from './alert.service';
 
 @Component({
   selector: 'app-alert',
@@ -9,9 +10,12 @@ import { UserService } from '../user.service';
 export class AlertComponent {
   message: string;
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    private alertService: AlertService
+  ) {}
 
-  onCloseModal(){
-
+  onCloseModal() {
+    this.alertService.hideModal();
   }
 }

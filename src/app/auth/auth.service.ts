@@ -154,7 +154,3 @@ export class AuthService {
     return throwError(errorMessage);
   }
 }
-
-// set up http requests to Firebase for signup[x], login[x], sign out[x], auto-login[x], auto-logout[x].
-// add an auth guard to prevent unauthorized access to profile, suggested friends components
-// use the class project and videos as a reference
