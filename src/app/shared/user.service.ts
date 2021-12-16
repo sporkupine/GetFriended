@@ -63,7 +63,7 @@ export class UserService {
     },
     {
       id: 2,
-      name: 'TheRealBobaFett@gmail.com',
+      name: 'Boba Fett',
       imagePath:
         'https://nypost.com/wp-content/uploads/sites/2/2021/09/book-of-boba-fett-key-art.jpg?quality=80&strip=all',
       bio: '....as you wish..',
@@ -121,7 +121,6 @@ export class UserService {
   }
 
   getUserById(id: number) {
-    // ===
     const user = this.users.find((user) => user.id === id);
     console.log(this.users);
     return user;
