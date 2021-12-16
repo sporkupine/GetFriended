@@ -4,12 +4,12 @@
       <div class="card">
         <div class="card-content pt20 pb20 profile-header">
           <img
-            src="https://bootdey.com/img/Content/avatar/avatar6.png"
+            [src] ="user.imagePath"
             alt=""
             class="img-fluid rounded-circle"
           />
-          <h4 class="card-title text-center mb20">User's Name</h4>
-          <p>User profile summary.</p>
+          <h4 class="card-title text-center mb20">{{user.name}}</h4>
+          <p>{{user.bio}}</p>
           <hr />
         </div>
 
@@ -31,7 +31,7 @@
                   <div class="float-left">
                     <a href="#"
                       ><img
-                        src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                        [src] = "user.imagePath"
                         alt=""
                         class="img-fluid rounded-circle"
                     /></a>

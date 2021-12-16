@@ -9,7 +9,7 @@ import { SuggestedFriendsComponent } from './suggested-friends/suggested-friends
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'suggested-friends', component: SuggestedFriendsComponent },
-  { path: 'profile', component: ProfileComponent },
+  // { path: 'profile', component: ProfileComponent },
   { path: 'auth', component: AuthComponent},
   { path: 'user/:id', component: ProfileComponent }
 ];
