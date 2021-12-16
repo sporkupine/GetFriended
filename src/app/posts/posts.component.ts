@@ -17,7 +17,7 @@ export class PostsComponent implements OnInit {
   ngOnInit(): void {
     this.posts = this.PostsService.getPosts();
     this.PostsService.postsSubject.subscribe((posts) => {
-      this.posts = posts;
+      this.posts = posts.sort((a, b) => +b.date - +a.date);
     })
   }
 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Post } from '../shared/post.model';
+import { UserService } from '../shared/user.service';
 
 @Injectable({
   providedIn: 'root',
@@ -8,46 +9,25 @@ import { Post } from '../shared/post.model';
 export class PostsService {
   postsSubject = new Subject<Post[]>();
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
-  posts: Post[] = [
-    {
-      name: 'John Starfish',
-      content: 'This is my first post.',
-    },
-    {
-      name: 'Tyler Joe',
-      content: 'I need a vacation.',
-    },
-    {
-      name: 'Jimmy Joe Johnson',
-      content: 'I hate my name.',
-    },
-    {
-      name: 'Billy Barracuda',
-      content: 'Stop polluting the oceans!',
-    },
-    {
-      name: 'Eugene Krabs',
-      content: 'Pearl made me sign up for this new site',
-    },
-    {
-      name: 'Squidward Tentacles',
-      content:
-        'Anybody know how to get a neighbor evicted? Asking for a friend.',
-    },
-  ];
+  posts: Post[] = this.userService.fetchPosts();
 
   onSubmitPost(postText) {
     if (postText == '') {
       return;
     } else {
-      this.posts.push({ name: '', content: postText });
+      this.posts.push({
+        userName: '',
+        name: '',
+        content: postText,
+        date: new Date(),
+      });
       this.postsSubject.next(this.posts.slice());
     }
   }
 
   getPosts() {
-    return this.posts;
+    return this.posts.sort((a, b) => +b.date - +a.date);
   }
 }
