@@ -14,6 +14,8 @@ export class ProfileComponent implements OnInit {
   id: number;
   activeUser: User;
   posts: Post[];
+  friendAdded: boolean = false;
+  friendDeleted: boolean = false;
 
   constructor(
     private userService: UserService,
@@ -29,9 +31,11 @@ export class ProfileComponent implements OnInit {
 
   onAddFriend(user){
     this.userService.addFriend(user);
+    this.friendAdded = true;
   }
 
   onDeleteFriend(user){
     this.userService.deleteFriend(user);
+    this.friendDeleted = true;
   }
 }
