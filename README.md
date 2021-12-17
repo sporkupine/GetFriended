@@ -30,7 +30,7 @@ A post can have likes and dislikes!
 
 ---
 ## To Do (updated 12/15)
-- Create 'Add Friend' and 'Delete Friend' buttons
+- ~~Create 'Add Friend' and 'Delete Friend' buttons~~
   - create modal popups for when user adds or deletes a friend
 - Create 'Like' and 'Dislike' (or similar) buttons for posts
   - maybe sort by score instead of date?
@@ -42,9 +42,6 @@ A post can have likes and dislikes!
 - get posts on homepage to display their user's profile picture
 - fix the profile link when navigating from another profile
 - Clean up CSS, make the whole thing look pretty
-- Give the post modal a title input
-- fix wonky profile pictures on user profiles (specifically Boba Fett & the Ultimate Warrior)
-- 
 
 
 
@@ -65,6 +62,8 @@ A post can have likes and dislikes!
 - add validation to the auth page
   - make sure email is a valid email, password is at least six characters
     - for signup only: make sure password and password confirm fields match before submitting form
+- Give the post modal a title input
+- fix wonky profile pictures on user profiles (specifically Boba Fett & the Ultimate Warrior)
 ---
 
 
