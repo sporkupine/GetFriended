@@ -11,7 +11,7 @@ import { UserService } from '../shared/user.service';
 export class SuggestedFriendsComponent implements OnInit {
 
   users: User[];
-  friendModal;
+  friendModal: User;
 
   constructor(private userService: UserService, private router: Router) {}
 
