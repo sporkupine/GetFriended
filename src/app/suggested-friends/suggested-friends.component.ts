@@ -25,12 +25,14 @@ export class SuggestedFriendsComponent implements OnInit {
     this.router.navigate(['/user/' + id]);
   }
 
-  onAddFriend(user) {
+  onAddFriend(user: User) {
     this.userService.addFriend(user);
     this.friendModal = user;
+    console.log(user);
+
   }
 
-  onDeleteFriend(user) {
+  onDeleteFriend(user: User) {
     this.userService.deleteFriend(user);
     this.friendModal = user;
   }
