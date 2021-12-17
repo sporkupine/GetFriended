@@ -1,9 +1,14 @@
 #createPostBtn {
-  width: 490px;
-  height: 54px;
-  left: 376px;
-  top: 108px;
+  width: 50vw;
+  height: 3rem;
+  left: 25vw;
+  top: 5%;
   color: black;
   background: #ededed;
-  font-size: 25px;
+  font-size: 2rem;
+  text-align: center;
+  padding: none;
+  display: inline-block;
+  align-items: center;
+  line-height: 10px;
 }

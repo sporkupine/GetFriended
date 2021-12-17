@@ -13,7 +13,7 @@
     top: 30vh;
     left: 20vw;
     width: 60vw;
-    height: 33vh;
+    height: 50vh;
     padding: 3%;
     z-index: 100;
     background: rgba(35, 32, 50, 0.82);
@@ -30,7 +30,7 @@
 #postText {
   display: block;
   width: 90%;
-  height: 75%;
+  height: 80%;
   margin-left: auto;
   margin-right: auto;
   resize: auto;
@@ -42,6 +42,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  top: 5px;
 }
 
 button {
