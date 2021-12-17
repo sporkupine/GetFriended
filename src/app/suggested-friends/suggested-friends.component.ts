@@ -9,10 +9,9 @@ import { UserService } from '../shared/user.service';
   styleUrls: ['./suggested-friends.component.css'],
 })
 export class SuggestedFriendsComponent implements OnInit {
-  @Input() user: User;
-  @Input() message: string;
-  friendModal;
+
   users: User[];
+  friendModal;
 
   constructor(private userService: UserService, private router: Router) {}
 
@@ -27,6 +26,7 @@ export class SuggestedFriendsComponent implements OnInit {
   onAddFriend(user: User) {
     this.userService.addFriend(user);
     this.friendModal = user;
+
   }
 
   onDeleteFriend(user: User) {
