@@ -7,9 +7,9 @@ import { User } from '../user.model';
   styleUrls: ['./alert.component.css'],
 })
 export class AlertComponent {
-  @Output() message: string;
+  @Input() user: User;
   @Output() close = new EventEmitter();
-  @Input() friendModal: string;
+  @Input() message: string;
 
   constructor() {}
 
@@ -17,8 +17,8 @@ export class AlertComponent {
     this.close.emit();
   }
 
-  showAddModal(friendModal: User) {
-    let name = friendModal.name;
+  showAddModal(user: User) {
+    let name = user.name;
     this.message = `You are now friends with ${name}!`;
   }
 

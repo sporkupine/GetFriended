@@ -6,5 +6,5 @@ export interface User {
   imagePath: string,
   bio: string,
   posts: Post[],
-  isFriends?: boolean
+  isFriends: boolean
 }

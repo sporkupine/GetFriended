@@ -1,7 +1,13 @@
 <div class="container">
   <div class="row">
-    <app-alert (close)="onClose()" *ngIf="friendModal"></app-alert>
-    <!-- need a property that can be set by AlertService to show modal -->
+    <app-alert
+      (close)="onClose()"
+      *ngIf="friendModal"
+      [user]="activeUser"
+      [message]="
+        activeUser.isFriends ? 'Now friends with' : 'No longer friends with'
+      "
+    ></app-alert>
     <div class="col-md-4 mb30">
       <div class="card">
         <div class="card-content pt20 pb20 profile-header">
