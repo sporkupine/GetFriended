@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertService } from '../shared/alert/alert.service';
 import { User } from '../shared/user.model';
 import { UserService } from '../shared/user.service';
 
@@ -10,12 +9,12 @@ import { UserService } from '../shared/user.service';
   styleUrls: ['./suggested-friends.component.css'],
 })
 export class SuggestedFriendsComponent implements OnInit {
+  friendModal;
   users: User[];
 
   constructor(
     private userService: UserService,
     private router: Router,
-    private alertService: AlertService
   ) {}
 
   ngOnInit(): void {
@@ -28,11 +27,15 @@ export class SuggestedFriendsComponent implements OnInit {
 
   onAddFriend(user) {
     this.userService.addFriend(user);
-    // this.alertService.showModal?
+    this.friendModal = user;
   }
 
   onDeleteFriend(user) {
     this.userService.deleteFriend(user);
-    // this.alertService.showModal?
+    this.friendModal = user;
+  }
+
+  onClose(){
+    this.friendModal = null;
   }
 }

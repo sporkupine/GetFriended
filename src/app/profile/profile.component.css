@@ -73,7 +73,7 @@ Profile
 }
 
 .card .card-content {
-    padding: 15px 15px;
+    padding: 15px;
 }
 
 .profile-header {
@@ -123,4 +123,8 @@ Profile
         color: #999;
         margin-bottom: 10px;
         font-size: 12px;
+    }
+
+    .img-fluid {
+      text-align: center;
     }

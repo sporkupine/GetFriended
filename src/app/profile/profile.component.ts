@@ -11,13 +11,14 @@ import { UserService } from '../shared/user.service';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
+  friendModal;
   id: number;
   activeUser: User;
   posts: Post[];
 
   constructor(
     private userService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
@@ -29,12 +30,16 @@ export class ProfileComponent implements OnInit {
 
   onAddFriend(user){
     this.userService.addFriend(user);
-    // this.alertService.showModal?
+    this.friendModal = user;
   }
 
   onDeleteFriend(user){
     this.userService.deleteFriend(user);
-    // this.alertService.showModal?
+    this.friendModal = user;
 
+  }
+
+  onClose() {
+  this.friendModal = null;
   }
 }

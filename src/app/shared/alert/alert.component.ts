@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { UserService } from '../user.service';
-import { AlertService } from './alert.service';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-alert',
@@ -8,14 +7,23 @@ import { AlertService } from './alert.service';
   styleUrls: ['./alert.component.css'],
 })
 export class AlertComponent {
-  message: string;
+  @Output() message: string;
+  @Output() close = new EventEmitter();
+  @Input() friendModal: string;
 
-  constructor(
-    private userService: UserService,
-    private alertService: AlertService
-  ) {}
+  constructor() {}
 
   onCloseModal() {
-    this.alertService.hideModal();
+    this.close.emit();
+  }
+
+  showAddModal(friendModal: User) {
+    let name = friendModal.name;
+    this.message = `You are now friends with ${name}!`;
+  }
+
+  showDeleteModal(user: User) {
+    let name = user.name;
+    this.message = `You are no longer friends with ${name}.`;
   }
 }
