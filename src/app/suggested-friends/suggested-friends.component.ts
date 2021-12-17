@@ -9,6 +9,7 @@ import { UserService } from '../shared/user.service';
   styleUrls: ['./suggested-friends.component.css'],
 })
 export class SuggestedFriendsComponent implements OnInit {
+
   users: User[];
   friendModal;
 

@@ -16,4 +16,6 @@ export class AlertComponent {
   onCloseModal() {
     this.close.emit();
   }
+
+
 }
