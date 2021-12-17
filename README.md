@@ -29,7 +29,7 @@ A post can have likes and dislikes!
   - https://www.figma.com/file/PMxjIII4uKkPEtWJLxmh1n/Untitled?node-id=0%3A1
 
 ---
-## To Do (updated 12/15)
+## To Do (updated 12/16)
 - ~~Create 'Add Friend' and 'Delete Friend' buttons~~
   - create modal popups for when user adds or deletes a friend
 - Create 'Like' and 'Dislike' (or similar) buttons for posts
@@ -46,7 +46,7 @@ A post can have likes and dislikes!
 
 
 
-## Done (updated 12/15)
+## Done (updated 12/16)
 - display posts on the homepage
  - use dummy posts and users for now
 - generate pop-up modal on click of the Create Post button on homepage
