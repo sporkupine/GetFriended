@@ -14,10 +14,7 @@ export class SuggestedFriendsComponent implements OnInit {
   friendModal;
   users: User[];
 
-  constructor(
-    private userService: UserService,
-    private router: Router,
-  ) {}
+  constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
     this.users = this.userService.getUsers();
@@ -30,8 +27,6 @@ export class SuggestedFriendsComponent implements OnInit {
   onAddFriend(user: User) {
     this.userService.addFriend(user);
     this.friendModal = user;
-    console.log(user);
-
   }
 
   onDeleteFriend(user: User) {
@@ -39,7 +34,7 @@ export class SuggestedFriendsComponent implements OnInit {
     this.friendModal = user;
   }
 
-  onClose(){
+  onClose() {
     this.friendModal = null;
   }
 }
