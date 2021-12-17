@@ -3,17 +3,30 @@
     <app-alert *ngIf=""></app-alert>
     <!-- need a property that can be updated by AlertService -->
     <div class="col-md-6" *ngFor="let user of users">
-      <div class="card" style="width: 18rem;">
-      <img [src]="user.imagePath" class="card-img-top" alt="...">
-      <div class="card-body">
-      <h5 class="card-title">{{user.name}}</h5>
-      <p class="card-text">{{user.bio}}</p>
-      <button class="btn btn-primary" (click)="onViewProfile(user.id)">Go to Profile</button>
-      <button *ngIf="!user.isFriends" class="btn btn-success" (click)="onAddFriend(user)">Add Friend</button>
-      <button *ngIf="user.isFriends" class="btn btn-danger" (click)="onDeleteFriend(user)">Delete Friend</button>
-
-  </div>
-</div>
+      <div class="card" style="width: 18rem">
+        <img [src]="user.imagePath" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ user.name }}</h5>
+          <p class="card-text">{{ user.bio }}</p>
+          <button class="btn btn-primary" (click)="onViewProfile(user.id)">
+            Go to Profile
+          </button>
+          <button
+            *ngIf="!user.isFriends"
+            class="btn btn-success"
+            (click)="onAddFriend(user)"
+          >
+            Add Friend
+          </button>
+          <button
+            *ngIf="user.isFriends"
+            class="btn btn-danger"
+            (click)="onDeleteFriend(user)"
+          >
+            Delete Friend
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

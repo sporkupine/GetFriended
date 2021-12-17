@@ -18,4 +18,9 @@ export class AlertService {
 }
 
 // need a way to update component properties that in turn dynamically show or hide
-// the alert modal. Event Emitters??? Observables?? Will have to ask in class
+// the alert modal.
+
+// will likely use an EventEmitter and @Output decorators on the components where we
+// need to show the modal.
+// possibly attach a string 'add' or 'delete' to the emitted event to dictate the
+// message displayed by the modal.
