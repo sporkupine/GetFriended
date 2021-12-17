@@ -4,9 +4,9 @@
       <app-alert
         (close)="onClose()"
         *ngIf="friendModal"
-        [user]="user"
+        [user]="friendModal"
         [message]="
-          user.isFriends ? 'Now friends with' : 'No longer friends with'
+          friendModal.isFriends ? 'Now friends with' : 'No longer friends with'
         "
       ></app-alert>
       <div class="card" style="width: 18rem">
