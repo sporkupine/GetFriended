@@ -130,6 +130,7 @@ export class UserService {
         },
       ],
       isFriends: false,
+
     },
   ];
 
@@ -141,6 +142,11 @@ export class UserService {
     const user = this.users.find((user) => user.id === id);
     return user;
   }
+ /*  getUser(id) {
+    return this.users.filter((user) => {
+      return user.id == id;
+    });
+  } */
 
   fetchPosts(): Post[] {
     let allPosts = this.users.map((user) => user.posts);
