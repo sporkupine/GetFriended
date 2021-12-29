@@ -14,3 +14,14 @@ input.ng-invalid.ng-touched {
 span.help-block {
   color: rgb(110, 7, 7);
 }
+
+form {
+  background-color: rgb(124, 124, 124);
+  padding: 10%;
+  border-radius: .25em;
+  width: 100%;
+}
+
+.form-container > h4, p {
+  color:rgb(226, 226, 226);
+}

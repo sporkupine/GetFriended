@@ -30,4 +30,12 @@ export class PostsService {
   getPosts() {
     return this.posts.sort((a, b) => +b.date - +a.date);
   }
+
+  likePost(post:Post) {
+  this.userService.likePost(post);
+  }
+
+  dislikePost(post:Post) {
+  this.userService.dislikePost(post);
+  }
 }

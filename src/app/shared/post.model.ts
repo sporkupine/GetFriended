@@ -4,5 +4,6 @@ export interface Post {
  userId?: string,
  content: string,
  date?: Date,
- imagePath?: string
+ imagePath?: string,
+ likes?: number;
 }

@@ -21,6 +21,12 @@ export class PostsComponent implements OnInit {
     })
   }
 
+  onLike(post:Post) {
+    this.PostsService.likePost(post);
+  }
 
+  onDislike(post:Post) {
+    this.PostsService.dislikePost(post);
+  }
 
 }
