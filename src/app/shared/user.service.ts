@@ -55,7 +55,7 @@ export class UserService {
           content:
             'ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu augue ut lectus arcu bibendum at varius vel pharetra vel turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a cras semper auctor neque vitae tempus quam pellentesque nec nam aliquam sem et tortor consequat id porta nibh venenatis cras sed felis eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam',
           date: new Date(2019, 4, 16, 20, 11),
-          likes: 2,
+          likes: 3,
         },
         {
           userName: 'The Ultimate Warrior',
@@ -63,7 +63,7 @@ export class UserService {
           content:
             'suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque',
           date: new Date(2019, 3, 19, 19, 19),
-          likes: 2,
+          likes: 1,
         },
         {
           userName: 'The Ultimate Warrior',
@@ -89,7 +89,7 @@ export class UserService {
           content:
             'justo laoreet sit amet cursus sit amet dictum sit amet justo donec enim diam vulputate ut pharetra sit amet aliquam id diam maecenas ultricies mi eget mauris pharetra et ultrices neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui sapien eget mi proin sed libero enim sed faucibus turpis in eu mi bibendum neque',
           date: new Date(2021, 11, 15, 14, 14),
-          likes: 2,
+          likes: 3,
         },
         {
           userName: 'Boba Fett',
@@ -97,7 +97,7 @@ export class UserService {
           content:
             'velit ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed nisi lacus sed viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur lorem donec massa sapien faucibus et molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu augue ut lectus',
           date: new Date(2021, 10, 18, 18, 43),
-          likes: 2,
+          likes: 6,
         },
         {
           userName: 'Boba Fett',
@@ -105,7 +105,7 @@ export class UserService {
           content:
             'nunc non blandit massa enim nec dui nunc mattis enim ut tellus elementum sagittis vitae et leo duis ut diam quam nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas dui id ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit sed vulputate mi sit',
           date: new Date(2021, 3, 23, 8, 51),
-          likes: 2,
+          likes: 4,
         },
       ],
       isFriends: false,
@@ -123,7 +123,7 @@ export class UserService {
           content:
             'ac turpis egestas sed tempus urna et pharetra pharetra massa massa ultricies mi quis hendrerit dolor magna eget est lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas integer eget',
           date: new Date(2021, 11, 11, 11, 51),
-          likes: 2,
+          likes: 3,
         },
         {
           userName: 'The Wolf Man',
@@ -138,7 +138,7 @@ export class UserService {
           name: 'I have the coolest profile pic on this silly website',
           content: "...and it's not even close",
           date: new Date(2021, 9, 18, 17, 49),
-          likes: 2,
+          likes: 6,
         },
       ],
       isFriends: false,
@@ -170,10 +170,10 @@ export class UserService {
   }
 
   likePost(post:Post) {
-    post.likes = post.likes++;
+    post.likes++;
   }
 
   dislikePost(post:Post) {
-    post.likes = post.likes--;
+    post.likes--;
   }
 }
