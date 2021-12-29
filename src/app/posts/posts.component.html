@@ -1,22 +1,29 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6" *ngFor="let post of posts">
-        <div
-          class="card"
-          style="width: auto; height: auto; margin: 2%; background-color: #c4c4c4"
-        >
-          <div class="card-body">
-            <h4 class="card-title">
-              {{ post.userName }}
-            </h4>
-            <h5 class="card-title">
-              {{ post.name }}
-            </h5>
-            <p *ngIf="post.date" class="card-text"><small class="text-muted">{{ post.date | date:'short' }}</small></p>
-            <p class="card-text">
-              {{ post.content }}
-            </p>
-          </div>
+      <div
+        class="card bg-info"
+        style="
+          width: auto;
+          height: auto;
+          margin: 2%;
+          box-shadow: 3px 8px 10px 0px #2b2b2b;
+        "
+      >
+        <div class="card-body">
+          <h4 class="card-title">
+            {{ post.userName }}
+          </h4>
+          <h5 class="card-title">
+            {{ post.name }}
+          </h5>
+          <p *ngIf="post.date" class="card-text">
+            <small class="text-muted">{{ post.date | date: "short" }}</small>
+          </p>
+          <p class="card-text">
+            {{ post.content }}
+          </p>
+        </div>
       </div>
     </div>
   </div>

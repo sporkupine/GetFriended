@@ -4,11 +4,13 @@
   left: 25vw;
   top: 5%;
   color: black;
-  background: #ededed;
+  background: #53c237;
   font-size: 2rem;
   text-align: center;
   padding: none;
+  margin-bottom: 5%;
   display: inline-block;
   align-items: center;
   line-height: 10px;
+  box-shadow: 3px 8px 10px 0px #2B2B2B;
 }
