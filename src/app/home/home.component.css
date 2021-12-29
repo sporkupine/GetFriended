@@ -3,8 +3,8 @@
   height: 3rem;
   left: 25vw;
   top: 5%;
-  color: black;
-  background: #53c237;
+  color: rgb(26, 24, 24);
+  background: #488000;
   font-size: 2rem;
   text-align: center;
   padding: none;
@@ -13,4 +13,10 @@
   align-items: center;
   line-height: 10px;
   box-shadow: 3px 8px 10px 0px #2B2B2B;
+  transition: 0.25s;
+}
+
+#createPostBtn:hover {
+  background: #C9E265;
+  transform: scale(1.025);
 }
