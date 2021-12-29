@@ -1,0 +1,20 @@
+body {
+  background-color: #24305E
+}
+
+.card {
+  border: none;
+  box-shadow: 3px 8px 10px 0px #2B2B2B;
+  overflow: hidden;
+}
+
+.user-img {
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.user-img:hover {
+  transform: scale(1.1);
+}
+
+
