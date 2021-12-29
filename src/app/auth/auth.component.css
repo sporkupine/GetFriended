@@ -14,3 +14,8 @@ input.ng-invalid.ng-touched {
 span.help-block {
   color: rgb(110, 7, 7);
 }
+
+form {
+  background-color: rgb(197, 188, 188);
+  padding: 10%;
+}

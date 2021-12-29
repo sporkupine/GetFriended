@@ -10,3 +10,9 @@
 .navbar-dark .navbar-brand {
   color: black;
 }
+
+.navbar-brand img {
+  max-height: 6vh;
+  padding: none !important;
+  margin: -10% !important;
+}
