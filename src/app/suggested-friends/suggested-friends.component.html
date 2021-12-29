@@ -9,8 +9,8 @@
           friendModal.isFriends ? 'Now friends with' : 'No longer friends with'
         "
       ></app-alert>
-      <div class="card" style="width: 18rem">
-        <img [src]="user.imagePath" class="card-img-top" alt="..." />
+      <div class="card bg-info m-2" style="width: 18rem">
+        <img [src]="user.imagePath" class="card-img-top user-img"/>
         <div class="card-body">
           <h5 class="card-title">{{ user.name }}</h5>
           <p class="card-text">{{ user.bio }}</p>
