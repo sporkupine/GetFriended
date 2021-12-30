@@ -143,6 +143,32 @@ export class UserService {
       ],
       isFriends: false,
     },
+    {
+      id: 4,
+      name: 'Shaggy Rogers',
+      imagePath:
+        'https://cdn.hanna-barberawiki.com/thumb/8/82/Shaggy_Rogers.png/1200px-Shaggy_Rogers.png',
+      bio: "Like what's up man! Professional detective and foodie from Coolsville, Ohio.",
+      posts: [
+        {
+          userName: 'Shaggy',
+          name: 'Like, anybody know how to fix a broken down van?',
+          content:
+            "The Mystery Machine is acting up again. Fred seems to think I'm like some kind of mechanic, so me and Scoob gotta fix it.",
+          date: new Date(2021, 6, 4, 13, 22),
+          likes: 2,
+        },
+        {
+          userName: 'Shaggy',
+          name: 'Like, what do you feed a talking dog?',
+          content:
+            "So like, PETA has been giving me a lot of calls lately. Apparently dogs aren't supposed to have sandwiches, steaks, milkshakes, or like any of the other stuff that Scoob and I usually chow down on over the course of a mystery. Scoob has always been cool with it, so like I guess I never think about it. What am I supposed to be feeding him?",
+            date: new Date(2021, 11, 12, 13, 23),
+            likes: 5,
+        },
+      ],
+      isFriends: false,
+    },
   ];
 
   getUsers() {
@@ -169,11 +195,11 @@ export class UserService {
     user.isFriends = false;
   }
 
-  likePost(post:Post) {
+  likePost(post: Post) {
     post.likes++;
   }
 
-  dislikePost(post:Post) {
+  dislikePost(post: Post) {
     post.likes--;
   }
 }
