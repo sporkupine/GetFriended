@@ -29,11 +29,7 @@ A post can have likes and dislikes!
   - https://www.figma.com/file/PMxjIII4uKkPEtWJLxmh1n/Untitled?node-id=0%3A1
 
 ---
-## To Do (updated 12/16)
-- ~~Create 'Add Friend' and 'Delete Friend' buttons~~
-  - create modal popups for when user adds or deletes a friend
-- Create 'Like' and 'Dislike' (or similar) buttons for posts
-  - maybe sort by score instead of date?
+## To Do (updated 12/30)
 - Fix up the 'create post' functionality:
   - pull current user.name and display it in any new posts (user must be logged in first)
 - change user icon to reflect current user?
@@ -46,7 +42,7 @@ A post can have likes and dislikes!
 
 
 
-## Done (updated 12/16)
+## Done (updated 12/30)
 - display posts on the homepage
  - use dummy posts and users for now
 - generate pop-up modal on click of the Create Post button on homepage
@@ -64,6 +60,10 @@ A post can have likes and dislikes!
     - for signup only: make sure password and password confirm fields match before submitting form
 - Give the post modal a title input
 - fix wonky profile pictures on user profiles (specifically Boba Fett & the Ultimate Warrior)
+- Create 'Add Friend' and 'Delete Friend' buttons
+  - create modal popups for when user adds or deletes a friend
+- Create 'Like' and 'Dislike' (or similar) buttons for posts
+  - maybe sort by score instead of date?
 ---
 
 
