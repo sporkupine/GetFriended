@@ -12,3 +12,7 @@
 .user-img:hover {
   transform: scale(1.1);
 }
+
+.user-card {
+  background-color:  rgba(216, 233, 147, 0.8);
+}
