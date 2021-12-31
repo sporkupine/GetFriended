@@ -1,3 +1,6 @@
+<div class="logo-container">
+  <img src="../../assets/GetFriended-Logo.png" alt="GetFriended logo" />
+</div>
 <div class="container">
   <div class="row">
     <div
@@ -58,7 +61,7 @@
               <span
                 class="help-block"
                 *ngIf="
-                  authForm.get('passwordMatch').invalid  &&
+                  authForm.get('passwordMatch').invalid &&
                   authForm.get('passwordMatch.passwordConfirm').touched
                 "
                 >Passwords must match.</span
