@@ -6,11 +6,19 @@
 .fa {
   color: rgb(0,128,55);
   max-height: fit-content;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .fa:hover {
   transform: scale(1.2);
+}
+
+.fa-thumbs-up:hover {
+  color: rgb(22, 196, 22);
+}
+
+.fa-thumbs-down:hover {
+  color: rgb(199, 4, 4);
 }
 
 .post-card {
