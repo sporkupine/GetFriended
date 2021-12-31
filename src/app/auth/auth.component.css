@@ -16,12 +16,16 @@ span.help-block {
 }
 
 form {
-  background-color: rgb(124, 124, 124);
+  background-color: rgb(128, 146, 124);
   padding: 10%;
-  border-radius: .25em;
+  border-radius: .3em;
   width: 100%;
 }
 
-.form-container > h4, p {
+.form-container > h2, p {
   color:rgb(226, 226, 226);
+}
+
+.form-container > h2 {
+  font-weight: bold;
 }
